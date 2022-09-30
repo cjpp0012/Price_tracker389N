@@ -9,3 +9,6 @@ Price tracker is a website for learn and practice React JS.
 ## link to the deployed app
 	https://kwong51frontend.herokuapp.com/
 	(Backend link : https://kwong51backend.herokuapp.com/)
+
+## How to run locally (front-end only, for basic demonstration of how website looks like):
+npm start
