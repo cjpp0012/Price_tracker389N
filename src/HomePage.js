@@ -62,7 +62,7 @@ class Home extends React.Component  {
         }
     }
     submitData = e =>{
-        fetch('/product/:').then()//////////////
+        fetch('/product/:').then()
         this.props.history.push({
             pathname:"/Item",
             state: this.state
