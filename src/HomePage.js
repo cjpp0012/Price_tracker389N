@@ -1,7 +1,15 @@
 import React from "react";
 // import {withRouter, useHistory} from 'react-router-dom';
-import logo from "./price-drop.jpg"
+// import logo from "./price-drop.jpg"
 import background from "./giphy.gif"
+import icon from "./360_F_293396301_JCm1p815YEbh7ga75XOUuEsaDVlZ2O0C.jpg"
+
+
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 class Home extends React.Component  {
     constructor(props) {
@@ -68,6 +76,43 @@ class Home extends React.Component  {
         return (
             <div class="bg" style={{ backgroundImage: `url(${background})` }}>
             <div class="home">
+
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">
+        <img
+              src= {icon}
+              width="50"
+              height="50"
+              alt="Logo"
+            />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Top Deal</Nav.Link>
+            <NavDropdown title="Your Price Tracks" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/1">All Alerts</NavDropdown.Item>
+              <NavDropdown.Item href="#action/2">
+                All Price Watches
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3">Top Drops</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/4">
+                About Us
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+
+
+
+
+
+
                     <center>
                         <h1>Welcome to Best Price Tracker</h1>
                         <p className="lead">

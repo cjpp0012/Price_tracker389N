@@ -66,7 +66,7 @@ class Item extends React.Component  {
                 body: JSON.stringify(data)
               }
             fetch('/track', options).then(res=>res.json())
-            .then(data=> {if (data.success==true) {alert("You has been successfully update subscribtion for your email" + this.state.email)} else {alert("Fail to update, please check your email address")}} )
+            .then(data=> {if (data.success===true) {alert("You has been successfully update subscribtion for your email" + this.state.email)} else {alert("Fail to update, please check your email address")}} )
         }
     }
 
@@ -88,7 +88,7 @@ class Item extends React.Component  {
                 body: JSON.stringify(data)
               }
             fetch('/track', options).then(res=>res.json())
-            .then(data=> {if (data.success==true) {alert("You has been successfully remove subscribtion for your email" + this.state.email)} else {alert("Fail to update, please check your email address")}} )
+            .then(data=> {if (data.success===true) {alert("You has been successfully remove subscribtion for your email" + this.state.email)} else {alert("Fail to update, please check your email address")}} )
             
         }
     }
@@ -174,7 +174,7 @@ class Item extends React.Component  {
         const resp_d = await fetch('/product')
         // /'+this.state.name
         const json_d = await resp_d.json();
-        const productData = json_d.info.filter(prod => prod.item == this.state.name)
+        const productData = json_d.info.filter(prod => prod.item === this.state.name)
         console.log(productData)
         this.setState({hisPrice: productData});
 
@@ -201,11 +201,11 @@ class Item extends React.Component  {
         return (
             <div class="item">
             <div class="top">
-            <img class="icon" src={icon}></img>
+            <img class="icon" src={icon} alt="icon" ></img>
               <a href="/">Home</a>
-              <a onClick={this.not_available}>Top Price drops</a>
-              <a onClick={this.not_available}>Contact</a>
-              <a onClick={this.not_available}>About</a>
+              <a href="/" onClick={this.not_available}>Top Price drops</a>
+              <a href="/" onClick={this.not_available}>Contact</a>
+              <a href="/" onClick={this.not_available}>About</a>
             </div>
             <br />
 

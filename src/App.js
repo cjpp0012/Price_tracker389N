@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
 
-import { BrowserRouter, Route, Switch, Link, Redirect} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { BrowserRouter, Route, Switch,} from 'react-router-dom';
+// import { Link, Redirect} from 'react-router-dom';
 import Home from './HomePage'
 import Item from './ItemPage'
 
