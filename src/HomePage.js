@@ -1,6 +1,6 @@
 import React from "react";
 // import {withRouter, useHistory} from 'react-router-dom';
-import logo from "./price-drop.jpg"
+// import logo from "./price-drop.jpg"
 import background from "./giphy.gif"
 
 class Home extends React.Component  {
@@ -54,7 +54,7 @@ class Home extends React.Component  {
         }
     }
     submitData = e =>{
-        fetch('/product/:').then()
+        fetch('/product/:').then()//////////////
         this.props.history.push({
             pathname:"/Item",
             state: this.state
